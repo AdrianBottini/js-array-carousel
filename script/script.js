@@ -34,10 +34,6 @@ eleBtnDown.addEventListener('click', function () {
     }
 	listEleImg[activeIndex].classList.add('active');
 
-	// eleBtnUp.classList.remove('hidden');
-	// if (activeIndex === listEleImg.length - 1) {
-	// 	eleBtnDown.classList.add('hidden');
-	// }
 });
 
 eleBtnUp.addEventListener('click', function () {
@@ -49,8 +45,4 @@ eleBtnUp.addEventListener('click', function () {
     }
 	listEleImg[activeIndex].classList.add('active');
 
-	// eleBtnDown.classList.remove('hidden');
-	// if (activeIndex === 0) {
-	// 	eleBtnUp.classList.add('hidden');
-	// }
 });
