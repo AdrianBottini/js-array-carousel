@@ -7,8 +7,8 @@ const arrImages = [
 ];
 
 const eleSlider = document.querySelector('.slider');
-const eleBtnLeft = document.querySelector('.btn-up');
-const eleBtnRight = document.querySelector('.btn-down');
+const eleBtnUp = document.querySelector('.btn-up');
+const eleBtnDown = document.querySelector('.btn-down');
 
 for (let i = 0; i < arrImages.length; i++) {
 	const eleImg = document.createElement('img');
@@ -25,24 +25,24 @@ for (let i = 0; i < arrImages.length; i++) {
 const listEleImg = document.querySelectorAll('.slider-img'); 
 let activeIndex = 0;
 
-eleBtnRight.addEventListener('click', function () {
+eleBtnDown.addEventListener('click', function () {
 	listEleImg[activeIndex].classList.remove('active');
 	activeIndex++;
 	listEleImg[activeIndex].classList.add('active');
 
-	eleBtnLeft.classList.remove('hidden');
+	eleBtnUp.classList.remove('hidden');
 	if (activeIndex === listEleImg.length - 1) {
-		eleBtnRight.classList.add('hidden');
+		eleBtnDown.classList.add('hidden');
 	}
 });
 
-eleBtnLeft.addEventListener('click', function () {
+eleBtnUp.addEventListener('click', function () {
 	listEleImg[activeIndex].classList.remove('active');
 	activeIndex--;
 	listEleImg[activeIndex].classList.add('active');
 
-	eleBtnRight.classList.remove('hidden');
+	eleBtnDown.classList.remove('hidden');
 	if (activeIndex === 0) {
-		eleBtnLeft.classList.add('hidden');
+		eleBtnUp.classList.add('hidden');
 	}
 });
