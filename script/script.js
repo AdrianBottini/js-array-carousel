@@ -27,22 +27,30 @@ let activeIndex = 0;
 
 eleBtnDown.addEventListener('click', function () {
 	listEleImg[activeIndex].classList.remove('active');
-	activeIndex++;
+    if (activeIndex === listEleImg.length - 1) {
+        activeIndex = 0;
+    } else {
+        activeIndex++;
+    }
 	listEleImg[activeIndex].classList.add('active');
 
-	eleBtnUp.classList.remove('hidden');
-	if (activeIndex === listEleImg.length - 1) {
-		eleBtnDown.classList.add('hidden');
-	}
+	// eleBtnUp.classList.remove('hidden');
+	// if (activeIndex === listEleImg.length - 1) {
+	// 	eleBtnDown.classList.add('hidden');
+	// }
 });
 
 eleBtnUp.addEventListener('click', function () {
 	listEleImg[activeIndex].classList.remove('active');
-	activeIndex--;
+    if (activeIndex === 0) {
+        activeIndex = listEleImg.length - 1;
+    } else {
+        activeIndex--;
+    }
 	listEleImg[activeIndex].classList.add('active');
 
-	eleBtnDown.classList.remove('hidden');
-	if (activeIndex === 0) {
-		eleBtnUp.classList.add('hidden');
-	}
+	// eleBtnDown.classList.remove('hidden');
+	// if (activeIndex === 0) {
+	// 	eleBtnUp.classList.add('hidden');
+	// }
 });
